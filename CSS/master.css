@@ -1,0 +1,412 @@
+/* Start Variables */
+:root {
+--Pink: hsl(322, 100%, 66%);
+--Very-Pale-Cyan: hsl(193, 100%, 96%);
+--Very-Dark-Cyan: hsl(192, 100%, 9%);
+--Grayish-Blue: hsl(208, 11%, 55%);
+--font-family: 'Poppins', sans-serif;
+--font-family-alt: 'Open Sans', sans-serif;
+
+  }
+  /* End variables */
+  
+  /* Start global rules  */
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+  }
+  p{
+    font-family: var(--font-family-alt);
+  }
+  ul {
+      list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Small */
+  @media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+  /* End global rules  */
+  main{
+    background-image: url(../images/bg-hero-desktop.svg);
+  }
+  @media (max-width: 767px) {
+   main {
+       background-image: url(../images/bg-hero-mobile.svg);
+    }
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
+  }
+  header .logo{
+width: 200px;
+  }
+  @media (max-width: 767px) {
+    header .logo {
+        width: 120px;
+    }
+  }
+  header a{
+    padding: 15px 60px;
+    background-color: white;
+    border-radius: 47px;
+    color: var(--Very-Dark-Cyan);
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 10px #ddd;
+  }
+  @media (max-width: 767px) {
+    header a{
+        padding: 10px 30px;
+    }
+  }
+  header a:hover{
+    color: var(--Grayish-Blue);
+  }
+  main section{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+@media (max-width: 767px) {
+    main section {
+        grid-template-columns: repeat(1,1fr);
+    }
+  }
+section{
+    padding-top: 50px;
+}
+  section  .description{
+    width: 517px;
+    margin: 50px 30px;
+  }
+  @media (max-width: 767px) {
+    section  .description{
+       width: 345px;
+       margin: 0;
+       text-align: center;
+    }
+  }
+  section  .description h1{
+    font-size: 39px;
+  }
+  @media (max-width: 767px) {
+    section .description h1{
+     font-size: 26px;
+    }
+  }
+  section  .description p{
+    font-size: 18px;
+    margin-bottom: 70px;
+    font-family: var(--font-family-alt);
+  }
+  section .description a{
+    padding: 20px 55px;
+    background-color: var(--Pink);
+    border-radius: 30px;
+    color: var(--Very-Pale-Cyan);
+    font-size: 18px;
+    font-family: var(--font-family);
+  }
+  @media (max-width: 767px) {
+    section  .description a{
+        padding: 10px 47px;
+    }
+  }
+  section  .description a:hover{
+    background-color: hsl(322deg 100% 66% / 60%);
+  }
+  section  .interface-photo{
+    max-width: 550px;
+  }
+  @media (max-width: 767px) {
+    section .interface-photo{
+        max-width: 300px;
+    margin: 60px auto;
+    }
+  }
+  /* Start grow section */
+  .grow-section{
+    padding-top: 100px;
+  }
+  .section-holder{
+    display: grid;
+    grid-template-areas:
+        "image text";
+    background-color: white;
+    box-shadow: rgb(221 221 221) 0px 0px 10px;
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 50px;
+}
+@media(max-width:767px){
+    .section-holder{
+        grid-template-areas: "image""text";
+    }
+    .grow-section .container .section-holder .text{
+        grid-area: text
+    }
+    .user-section .container .section-holder img{
+        grid-area: image
+    }
+}
+  
+  .section-holder .text{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 0 0 45px;
+    
+  }
+  @media(max-width:767px){
+    .section-holder .text{
+      text-align: center;
+      padding: 0;
+    }
+  }
+
+  .section-holder p{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 30px;
+    color: var(--Grayish-Blue);
+    font-family: var(--font-family-alt);
+  }
+  @media(max-width:767px){
+    .section-holder p{
+        line-height: 1.3;
+        margin: 30px auto;
+    }
+  }
+  .section-holder img{
+    max-width: 450px;
+    margin-left: 60px;
+}
+@media(max-width:767px){
+    .section-holder img{
+        max-width: 300px;
+        margin: 20px auto 60px;
+    } 
+}
+.subscribe{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.subscribe .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.subscribe .container .subscribe-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 0 50px;
+    background-color: white;
+    -webkit-box-shadow: 0 0 10px #ddd;
+    -moz-box-shadow: 0 0 10px #ddd;
+    box-shadow: 0 0 3px #ddd;
+    z-index: 2;
+    
+}
+@media(max-width:767px){
+  .subscribe .container .subscribe-section{
+    padding: 0;
+  } 
+}
+.subscribe h2{
+    margin: 50px 70px;
+}
+@media(max-width:767px){
+  .subscribe h2{
+    margin: 30px auto;
+    font-size: 17px;
+    padding: 0 25px;
+  } 
+}
+
+.subscribe a{
+    padding: 18px 65px;
+    color: white;
+    background-color: var(--Pink);
+    border-radius: 25px;
+    font-family: var(--font-family-alt);
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+@media(max-width:767px){
+  .subscribe a{
+    margin-bottom: 20px;
+}
+}
+.subscribe a:hover{
+    background-color: hsl(322deg 100% 66% / 60%);
+  }
+
+  footer{
+background-color: var(--Very-Dark-Cyan);
+margin: -175px 0 0;
+color: white;
+  }
+  footer .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding-top: 150px;
+  }
+ 
+  footer  .footer-logo{
+    filter: invert(100%) sepia(100%) brightness(300%);
+    margin-bottom: 30px;
+  }
+  @media(max-width:767px){
+    footer  .footer-logo{
+      width: 170px;
+    }
+  }
+  
+  footer .contact .address{
+    display: flex;
+    align-items: flex-start;
+  }
+  footer .contact .address img{
+margin-right: 35px;
+  }
+  footer .contact .address p{
+    font-family: var(--font-family-alt);
+    line-height: 1.4;
+    font-size: 14px;
+  }
+  @media(max-width:767px){
+    footer .contact .address p{
+      width: 257px;
+    }
+  }
+  
+  footer .contact .number{
+    display: flex;
+    align-items: center;
+    margin: 25px 0 25px;
+  }
+  footer .contact .number p{
+    font-size: 14px;
+  }
+  footer .contact .number img{
+    margin-right: 25px;
+  }
+  footer .contact .mail{
+    display: flex;
+    align-items: center;
+  }
+  footer .contact .mail img{
+    margin-right: 25px;
+  }
+  footer .contact .mail p{
+    font-size: 14px;
+  }
+
+  footer .services{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  @media(max-width:767px){
+    footer .services{
+      flex-direction: column;
+      align-items: flex-start;
+      margin-top: 80px;
+    }
+  }
+  footer .services ul{
+    margin-top: 75px;
+  }
+  @media(max-width:767px){
+    footer .services ul{
+      margin:0;
+    }
+  }
+  footer  .services li{
+    margin-bottom: 35px
+  }
+  footer  .services li a{
+    color: white;
+    font-size: 14px;
+    font-family: var(--font-family-alt);
+  }
+  footer .social{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin-top: 65px;
+  }
+  @media(max-width:767px){
+    footer .social{
+      margin:0;
+    }
+  }
+  footer .social .fa-facebook{
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+  footer .social .fa-twitter{
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+  footer .social .fa-twitter:hover{
+    color: var(--Pink);
+  }
+  footer .social .fa-instagram{
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+  .copyright{
+    font-family: var(--font-family-alt);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 35px 35px 0;
+    padding-bottom: 20px;
+  }
